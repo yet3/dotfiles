@@ -1,0 +1,12 @@
+/*
+/*/
+
+!.gitignore
+!/public/
+
+!/wezterm/
+!starship.toml
+
+!/nvim/
+
+!/karabiner/
