@@ -63,3 +63,10 @@ map.set('n', "<C-u>", '<C-u>zz')
 
 -- map('n', 's', '<Plug>Lightspeed_omni_s')
 -- map('n', 'gs', '<Plug>Lightspeed_omni_gs')
+
+map.set('i', '<C-[>', '<Esc>')
+map.set('v', '<C-[>', '<Esc>')
+map.set('x', '<C-[>', '<Esc>')
+map.set('i', '<C-;>', '<Esc>')
+map.set('v', '<C-;>', '<Esc>')
+map.set('x', '<C-;>', '<Esc>')
