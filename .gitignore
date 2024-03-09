@@ -8,6 +8,8 @@
 !starship.toml
 
 !/nvim/
+!/kitty/
+!/tmux/
 
 !/karabiner/
 
