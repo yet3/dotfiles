@@ -1,6 +1,4 @@
-local M = {}
-
-M.set = function(m, l, r, o)
+function _G.map(m, l, r, o)
   local opts = { silent = true, noremap = true }
   if o then
     opts = vim.tbl_deep_extend('force', opts, o)
@@ -9,4 +7,3 @@ M.set = function(m, l, r, o)
   vim.keymap.set(m, l, r, opts)
 end
 
-return M

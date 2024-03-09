@@ -1,15 +1,12 @@
-local M = {
+return {
   'rcarriga/nvim-notify',
-  priority = 1001,
+  opts = {
+    top_down = false
+  },
+  config = function(M, opts)
+    local notify = safe_plug_load("notify", M);
+    notify.setup(opts)
+    vim.notify = notify
+  end
 }
 
-function M.config()
-  local status, notify = pcall(require, 'notify')
-  if (not status) then
-    print('Error while loading plugin: nvim-notify')
-    return
-  end
-  vim.notify = notify
-end
-
-return M

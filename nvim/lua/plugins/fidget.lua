@@ -1,10 +1,9 @@
-local M = {
-  'j-hui/fidget.nvim'
+return {
+  "j-hui/fidget.nvim",
+  opts = {
+  },
+  config = function(M, opts)
+    local fidget = safe_plug_load('fidget', M)
+    fidget.setup(opts)
+  end
 }
-
-function M.config()
-  local fidget = safe_plug_load('fidget', M)
-  fidget.setup({})
-end
-
-return M

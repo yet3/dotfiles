@@ -1,13 +1,8 @@
-local M = {
-  'norcalli/nvim-colorizer.lua'
+return {
+  'NvChad/nvim-colorizer.lua',
+  priority = 0,
+  config = function(M, opts)
+    local colorizer = safe_plug_load('colorizer', M)
+    colorizer.setup(opts)
+  end
 }
-
-function M.config() 
-  local colorizer = safe_plug_load('colorizer', M)
-
-  colorizer.setup({
-    '*'
-  })
-end
-
-return M
