@@ -11,7 +11,7 @@ return {
 	version = "*",
 	opts = {
 		open_mapping = [[<leader>tt]],
-		direction = "float",
+		direction = "tab",
 		insert_mappings = false,
 		on_open = function(term)
 			vim.cmd "startinsert!"
