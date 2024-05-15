@@ -5,9 +5,8 @@ return {
   build = ":TSUpdate",
   event = { "BufReadPost", "BufNewFile" },
   dependencies = {
-    { 'windwp/nvim-autopairs' },
-    { 'windwp/nvim-ts-autotag' },
-    { 'JoosepAlviste/nvim-ts-context-commentstring' },
+    { "windwp/nvim-autopairs" },
+    { "windwp/nvim-ts-autotag" },
     {
       "nvim-treesitter/nvim-treesitter-textobjects",
       init = function()
@@ -17,7 +16,7 @@ return {
   },
   cmd = { "TSUpdateSync" },
   opts = {
-    ensure_installed = require('config').ts_ensured_installed,
+    ensure_installed = require("config").ts_ensured_installed,
     highlight = {
       enable = true,
       additional_vim_regex_highlighting = false,
@@ -26,8 +25,11 @@ return {
       enable = true,
     },
     autotag = {
-      enable = true
-    }
+      enable = true,
+      enable_rename = true,
+      enable_close = true,
+      enable_close_on_slash = true,
+    },
   },
   config = function(M, opts)
     if type(opts.ensure_installed) == "table" then
@@ -43,10 +45,6 @@ return {
 
     safe_plug_load("nvim-treesitter.configs", M).setup(opts)
 
-    safe_plug_load('ts_context_commentstring', M).setup({
-      enable_autocmd = false,
-    })
-
     if load_textobjects then
       -- PERF: no need to load the plugin, if we only need its queries for mini.ai
       if opts.textobjects then
@@ -61,5 +59,5 @@ return {
         end
       end
     end
-  end
+  end,
 }
