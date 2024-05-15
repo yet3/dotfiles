@@ -66,6 +66,9 @@ return {
 				view = {
 					dim = true,
 				},
+				mappings = {
+					start_jumping = "",
+				},
 			}
 			map("n", "s", function()
 				mini.start(mini.builtin_opts.single_character)
