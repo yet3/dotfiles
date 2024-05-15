@@ -1,8 +1,9 @@
 local setUpTermMaps = function(bufnr)
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
-  vim.api.nvim_buf_set_keymap(bufnr, "t", [[<c-\>]], "<cmd>close<CR>", { noremap = true, silent = true })
-  vim.api.nvim_buf_set_keymap(bufnr, "t", "<c-q>", "<cmd>close<CR>", { noremap = true, silent = true })
   vim.api.nvim_buf_set_keymap(bufnr, "t", "<c-e>", "<cmd>close<CR>", { noremap = true, silent = true })
+
+  if is_key_mapped_to_buffer(bufnr, 't', " tt") then
+    vim.api.nvim_buf_del_keymap(bufnr, 't', "<leader>tt")
+  end
 end
 
 return {
