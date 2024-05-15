@@ -1,12 +1,12 @@
-require('utils.map')
-require('utils.ui.make_border')
-require('utils.str_split')
-require('utils.has_plugin')
-require('utils.safe_plug_load')
-require('utils.get_v_selected_text')
-require('utils.decimal_to_hex')
-require('utils.highlights')
-require('utils.serialize_table')
-require('utils.deep_copy')
-require('utils.is_key_mapped_to_buf')
-require('utils.make_id')
+require "utils.map"
+require "utils.ui.make_border"
+require "utils.str_split"
+require "utils.has_plugin"
+require "utils.safe_plug_load"
+require "utils.get_v_selected_text"
+require "utils.decimal_to_hex"
+require "utils.highlights"
+require "utils.serialize_table"
+require "utils.deep_copy"
+require "utils.is_key_mapped_to_buf"
+require "utils.make_id"
