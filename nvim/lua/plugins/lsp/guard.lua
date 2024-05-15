@@ -12,8 +12,11 @@ return {
     -- :lint('selene')
 
     ft('typescript,javascript,typescriptreact,javascriptreact,svelte'):fmt('prettier'):lint('eslint_d')
+    ft('css,scss,sass'):fmt('prettier')
     ft('go'):fmt('gofmt')
 
+    ft('json'):fmt('prettier')
+    ft('html'):fmt('prettier')
     -- ft('*'):lint('codespell')
     -- ft('go'):fmt('gofmt'):lint('golangci_lint')
 
