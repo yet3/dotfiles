@@ -88,3 +88,20 @@ map("x", "<C-;>", "<Esc>")
 
 map("n", "<Leader>n", ":Neotree toggle<CR>")
 map("n", "<Leader>m", ":Neotree reveal<CR>")
+
+local disableHL = function(key)
+	---@diagnostic disable-next-line
+	if vim.opt.hlsearch:get() then
+		vim.cmd.nohl()
+		return ""
+	else
+		return key
+	end
+end
+
+map("n", "<CR>", function()
+	disableHL "<CR>"
+end, { expr = true })
+map("n", "<Esc>", function()
+	disableHL "<Esc>"
+end, { expr = true })
