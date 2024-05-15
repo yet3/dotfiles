@@ -19,7 +19,9 @@ return {
     enabled = true,
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
-    opts = {},
+    opts = {
+      scope = { enabled = false },
+    },
     setup = function(opts, M)
       local plug = safe_plug_load('ibl', M)
       plug.setup(opts)
