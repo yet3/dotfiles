@@ -66,27 +66,38 @@ return {
         path_display = { 'truncate' },
         mappings = {
           n = {
-            ['e'] = actions.close,
-            ['q'] = actions.close,
-            ['o'] = function(prompt_bufnr)
-              return action_set.edit(open_with_picker(prompt_bufnr), 'edit')
-            end,
+            ['<C-e>'] = actions.close,
+
             ['s'] = function(prompt_bufnr)
               return action_set.edit(open_with_picker(prompt_bufnr), 'vnew')
             end,
             ['S'] = function(prompt_bufnr)
               return action_set.edit(open_with_picker(prompt_bufnr), 'new')
             end,
-            ['<CR>'] = function(prompt_bufnr)
+            -- ['<CR>'] = function(prompt_bufnr)
+            --   return action_set.edit(open_with_picker(prompt_bufnr), 'edit')
+            -- end,
+            -- ['o'] = function(prompt_bufnr)
+            --   return action_set.edit(open_with_picker(prompt_bufnr), 'edit')
+            -- end,
+            ['w'] = function(prompt_bufnr)
               return action_set.edit(open_with_picker(prompt_bufnr), 'edit')
             end,
+            ['<CR>'] = actions.select_default,
+            ['o'] = actions.select_default
           },
           i = {
+            ['<C-k>'] = actions.move_selection_previous,
+            ['<C-j>'] = actions.move_selection_next,
+
             ['<C-e>'] = actions.close,
-            ['<C-q>'] = actions.close,
-            ['<CR>'] = function(prompt_bufnr)
+            -- ['<CR>'] = function(prompt_bufnr)
+            --   return action_set.edit(open_with_picker(prompt_bufnr), 'edit')
+            -- end,
+            ['<C-w>'] = function(prompt_bufnr)
               return action_set.edit(open_with_picker(prompt_bufnr), 'edit')
             end,
+            ['<CR>'] = actions.select_default,
             ['<C-s>'] = function(prompt_bufnr)
               return action_set.edit(open_with_picker(prompt_bufnr), 'vnew')
             end,
