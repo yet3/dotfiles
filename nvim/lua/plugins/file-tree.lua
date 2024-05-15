@@ -25,6 +25,9 @@ return {
           nowait = false
         },
         ["o"] = {
+          "open",
+        },
+        ["w"] = {
           "open_with_window_picker",
           nowait = true
         },
@@ -59,7 +62,9 @@ return {
         ["p"] = "paste_from_clipboard",
         ["c"] = "copy",
         ["m"] = "move",
-        ["q"] = "close_window",
+
+        ["<C-e>"] = "close_window",
+
         ["R"] = "refresh",
         ["?"] = "show_help",
         ["<"] = "prev_source",
