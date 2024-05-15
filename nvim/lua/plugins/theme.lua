@@ -75,9 +75,9 @@ return {
 
 				-- Editor
 				SignColumn = { fg = theme.ui.special, bg = theme.ui.bg },
-				FoldColumn = { fg = theme.ui.nontext, bg = theme.ui.bg },
-				LineNr = { fg = theme.ui.nontext, bg = theme.ui.bg },
-				CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg, bold = false },
+				FoldColumn = { fg = theme.ui.nontext, bg = "NONE" },
+				LineNr = { fg = theme.ui.nontext, bg = "NONE" },
+				CursorLineNr = { fg = theme.diag.warning, bg = "NONE", bold = false },
 
 				-- Git signs
 				GitSignsAdd = { fg = theme.vcs.added, bg = theme.ui.bg },
