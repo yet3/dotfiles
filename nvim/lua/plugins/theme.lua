@@ -110,6 +110,9 @@ return {
 
         -- Telescope
         TelescopeTitle = { bg = palette.oldWhite, fg = palette.sumiInk0 },
+
+        -- mini.jump2d
+        MiniJump2dSpot = { bg = palette.peachRed, fg = 'white'}
       }
     end,
   },
