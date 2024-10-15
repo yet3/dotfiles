@@ -1,0 +1,6 @@
+mattmc3/zephyr path:plugins/completion
+https://github.com/peterhurford/up.zsh
+hlissner/zsh-autopair
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-history-substring-search
