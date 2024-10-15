@@ -5,12 +5,12 @@
 !/public/
 
 !/wezterm/
-!starship.toml
+!/kitty/
 
 !/nvim/
-!/kitty/
 !/tmux/
 
-!/karabiner/
+!/zsh/
+!starship.toml
 
 !README.md
