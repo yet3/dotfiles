@@ -1,63 +1,78 @@
-local load_textobjects = false
 return {
 	"nvim-treesitter/nvim-treesitter",
-  tag = 'v0.9.2',
+	tag = "v0.9.2",
 	build = ":TSUpdate",
-	event = { "BufReadPost", "BufNewFile" },
+	lazy = false,
 	dependencies = {
-		{ "windwp/nvim-autopairs" },
 		{ "windwp/nvim-ts-autotag" },
-		{
-			"nvim-treesitter/nvim-treesitter-textobjects",
-			init = function()
-				load_textobjects = true
-			end,
-		},
 	},
 	cmd = { "TSUpdateSync" },
-	opts = {
-		ensure_installed = require("config").ts_ensured_installed,
-		highlight = {
-			enable = true,
-			additional_vim_regex_highlighting = false,
-		},
-		indent = {
-			enable = true,
-		},
-		autotag = {
-			enable = true,
-			enable_rename = true,
-			enable_close = true,
-			enable_close_on_slash = true,
-		},
-	},
-	config = function(M, opts)
-		if type(opts.ensure_installed) == "table" then
-			local added = {}
-			opts.ensure_installed = vim.tbl_filter(function(lang)
-				if added[lang] then
-					return false
-				end
-				added[lang] = true
-				return true
-			end, opts.ensure_installed)
-		end
+	config = function()
+		require("nvim-treesitter.configs").setup({
+			auto_install = true,
+			ensure_installed = {
+				"vim",
+				"vimdoc",
+				"bash",
 
-		safe_plug_load("nvim-treesitter.configs", M).setup(opts)
+				"html",
+				"javascript",
+				"typescript",
+				"tsx",
+				"styled",
+				"astro",
+				"svelte",
+				"graphql",
+				"css",
+				"scss",
+				"prisma",
 
-		if load_textobjects then
-			-- PERF: no need to load the plugin, if we only need its queries for mini.ai
-			if opts.textobjects then
-				for _, mod in ipairs { "move", "select", "swap", "lsp_interop" } do
-					if opts.textobjects[mod] and opts.textobjects[mod].enable then
-						local Loader = require "lazy.core.loader"
-						Loader.disabled_rtp_plugins["nvim-treesitter-textobjects"] = nil
-						local plugin = require("lazy.core.config").plugins["nvim-treesitter-textobjects"]
-						require("lazy.core.loader").source_runtime(plugin.dir, "plugin")
-						break
-					end
-				end
-			end
-		end
+				"go",
+				"gomod",
+				"gosum",
+
+				"c",
+				"cpp",
+				"zig",
+				"rust",
+				"lua",
+				"python",
+				"json",
+
+				"sql",
+
+				"markdown",
+				"markdown_inline",
+
+				"query",
+				"regex",
+				"yaml",
+				"toml",
+				"dockerfile",
+				"make",
+
+				"git_config",
+				"git_rebase",
+				"gitattributes",
+				"gitcommit",
+				"gitignore",
+			},
+			highlight = {
+				enable = true,
+				additional_vim_regex_highlighting = false,
+			},
+			indent = {
+				enable = true,
+			}
+		})
+
+require('nvim-ts-autotag').setup({
+  opts = {
+    -- Defaults
+    enable_close = true, -- Auto close tags
+    enable_rename = true, -- Auto rename pairs of tags
+    enable_close_on_slash = false -- Auto close on trailing </
+  },
+})
 	end,
 }
