@@ -1,11 +1,17 @@
+*
+.*
 /*
 /*/
 
+# Repo
 !.gitignore
 !/public/
+!README.md
 
+# Terminal stuff
 !/wezterm/
 !/kitty/
+!/ghostty/
 
 !/nvim/
 !/tmux/
@@ -13,4 +19,3 @@
 !/zsh/
 !starship.toml
 
-!README.md
