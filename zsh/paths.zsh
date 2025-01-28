@@ -2,8 +2,13 @@
 export PATH="/Users/yet3/Library/Application Support/fnm:$PATH"
 # ==================================
 
+# === Zig ===
+export PATH="$HOME/zig:$PATH"
+# ==========
+
 # === Go ===
 export PATH=$PATH:$HOME/go/bin
+export CGO_CFLAGS_ALLOW="-Xpreprocessor"
 # ==========
 
 # === Android ===

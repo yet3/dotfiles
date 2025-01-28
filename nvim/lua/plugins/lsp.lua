@@ -9,11 +9,7 @@ return {
 
 		"j-hui/fidget.nvim",
 
-
-		"hrsh7th/nvim-cmp",
-		"hrsh7th/cmp-nvim-lsp",
-
-		-- Schema information
+		"saghen/blink.cmp",
 		"b0o/SchemaStore.nvim",
 
 		-- instead of tsserver
@@ -48,9 +44,9 @@ return {
 		})
 
 		local capabilities = nil
-		if pcall(require, "cmp_nvim_lsp") then
-			capabilities = require("cmp_nvim_lsp").default_capabilities()
-		end
+		if pcall(require, "blink.cmp") then
+      capabilities = require("blink.cmp").get_lsp_capabilities()
+    end
 
 		local lspconfig = require("lspconfig")
 

@@ -1,0 +1,21 @@
+{
+	"<script lang='ts'>": {
+		"prefix": "sts",
+		"body": ["<script lang=\"ts\">", "\t$1", "</script>"]
+	},
+	"<script lang='ts' module>": {
+		"prefix": "stsmod",
+		"body": ["<script lang=\"ts\" module>", "\t$1", "</script>"]
+	},
+	"add props with interface": {
+		"prefix": "tsprops",
+		"body": [
+			"interface IProps {",
+			"\t$1",
+			"}",
+      "",
+			"const { $2 }: IProps = \\$props()"
+		]
+	}
+}
+
