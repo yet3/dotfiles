@@ -1,0 +1,24 @@
+font-family             = VictorMono-SemiBold 
+font-family-bold        = VictorMono-Bold
+font-family-italic      = VictorMono-SemiBoldItalic 
+font-family-bold-italic = VictorMono-BoldItalic 
+
+keybind   = clear
+keybind   = super+q=quit
+keybind   = super+c=copy_to_clipboard
+keybind   = super+v=paste_from_clipboard
+
+clipboard-paste-protection = false
+copy-on-select             = clipboard
+
+macos-option-as-alt = true
+
+window-decoration       = true
+macos-titlebar-style    = hidden
+cursor-click-to-move    = true
+
+font-size               = 16
+background-opacity      = 0.9
+background-blur-radius  = 50
+
+theme = tokyonight
