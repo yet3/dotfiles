@@ -1,10 +1,10 @@
 -- from: https://github.com/runiq/neovim-throttle-debounce/blob/main/lua/throttle-debounce/init.lua
---@param fn (function) Function to debounce
---@param timeout (number) Timeout in ms
---@param first (boolean, optional) Whether to use the arguments of the first
+---@param fn (function) Function to debounce
+---@param timeout (number) Timeout in ms
+---@param first (boolean, optional) Whether to use the arguments of the first
 ---call to `fn` within the timeframe. Default: Use arguments of the last call.
---@returns (function, timer) Debounced function and timer. Remember to call
----`timer:close()` at the end or you will leak memory!
+---@returns (function, timer) Debounced function and timer. Remember to call
+----`timer:close()` at the end or you will leak memory!
 function _G.debounce(fn, ms, first)
 	local timer = vim.loop.new_timer()
 	local wrapped_fn
@@ -31,5 +31,3 @@ function _G.debounce(fn, ms, first)
 	end
 	return wrapped_fn, timer
 end
-
-

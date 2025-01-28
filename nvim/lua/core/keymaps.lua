@@ -1,7 +1,5 @@
 local map = vim.keymap.set
 
-local USE_COLEMAK_MAPS = false
-
 -- Change word under the cursor
 -- move to next/prev instance by using n/N
 -- replace next/prev instance by using .
@@ -12,59 +10,25 @@ vim.keymap.set("n", "<M-q>", "q", { noremap = true })
 vim.keymap.set("n", "q:", "q:i", { noremap = true })
 vim.keymap.set("n", "q", "<Nop>", { noremap = true })
 
--- Colemak remaps
-if USE_COLEMAK_MAPS then
-	map({ "n", "v" }, "e", "j", { noremap = true })
-	map({ "n", "v" }, "u", "k", { noremap = true })
-	map({ "n", "v" }, "n", "h", { noremap = true })
-	map({ "n", "v" }, "i", "l", { noremap = true })
+-- Resizing splits
+map("n", "<C-S-l>", ":vertical resize +5<CR>")
+map("n", "<C-S-h>", ":vertical resize -5<CR>")
+map("n", "<C-S-j>", ":resize +5<CR>")
+map("n", "<C-S-k>", ":resize -5<CR>")
 
-	map({ "n", "v" }, "j", "e", { noremap = true })
-	map({ "n", "v" }, "l", "u", { noremap = true })
+-- Moving between splits
+map("n", "<C-w>", "<C-w>w")
+map("n", "<C-h>", "<C-w>h")
+map("n", "<C-j>", "<C-w>j")
+map("n", "<C-k>", "<C-w>k")
+map("n", "<C-l>", "<C-w>l")
 
-	map({ "n", "v" }, "h", "i", { noremap = true })
-	map({ "n", "v" }, "H", "I", { noremap = true })
 
-	-- Moving between splits
-	map("n", "<C-w>", "<C-w>w")
-	map("n", "<C-n>", "<C-w>h")
-	map("n", "<C-i>", "<C-w>l")
-	map("n", "<C-e>", "<C-w>j")
-	map("n", "<C-u>", "<C-w>k")
-
-	map({ "v", "n" }, "<C-c>", "<C-u>", { noremap = true })
-
-	-- Resizing splits
-	map("n", "<C-S-i>", ":vertical resize +5<CR>")
-	map("n", "<C-S-n>", ":vertical resize -5<CR>")
-	map("n", "<C-S-e>", ":resize +5<CR>")
-	map("n", "<C-S-u>", ":resize -5<CR>")
-
-	-- Moving lines
-	map("n", "E", ":m+1<CR>") -- DOWN
-	map("n", "U", ":m-2<CR>") -- UP
-	map("v", "E", ":m'>+<CR>gv") -- UP
-	map("v", "U", ":m-2<CR>gv") -- DOWN
-else
-	-- Moving between splits
-	map("n", "<C-w>", "<C-w>w")
-	map("n", "<C-h>", "<C-w>h")
-	map("n", "<C-j>", "<C-w>j")
-	map("n", "<C-k>", "<C-w>k")
-	map("n", "<C-l>", "<C-w>l")
-
-	-- Resizing splits
-	map("n", "<C-S-l>", ":vertical resize +5<CR>")
-	map("n", "<C-S-h>", ":vertical resize -5<CR>")
-	map("n", "<C-S-j>", ":resize +5<CR>")
-	map("n", "<C-S-k>", ":resize -5<CR>")
-
-	-- Moving lines
-	map("n", "J", ":m+1<CR>") -- DOWN
-	map("n", "K", ":m-2<CR>") -- UP
-	map("v", "J", ":m'>+<CR>gv") -- UP
-	map("v", "K", ":m-2<CR>gv") -- DOWN
-end
+-- Moving lines
+map("n", "J", ":m+1<CR>") -- DOWN
+map("n", "K", ":m-2<CR>") -- UP
+map("v", "J", ":m'>+<CR>gv") -- UP
+map("v", "K", ":m-2<CR>gv") -- DOWN
 
 -- Indenting
 map("v", "<", "<gv")

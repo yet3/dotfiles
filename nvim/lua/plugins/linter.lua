@@ -15,7 +15,6 @@ return {
 		}
 
 		local debouncedLint = debounce(function()
-			vim.notify("LINT")
 			require("lint").try_lint()
 		end, 250)
 

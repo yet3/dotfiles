@@ -25,3 +25,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+
+# bun completions
+[ -s "/Users/yet3/.bun/_bun" ] && source "/Users/yet3/.bun/_bun"
