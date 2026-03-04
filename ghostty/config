@@ -1,0 +1,84 @@
+# font-family             = iMWritingMono Nerd Font
+# font-family-bold        = iMWritingMono Nerd Font Bold 
+# font-family-italic      = iMWritingMono Nerd Font Italic 
+# font-family-bold-italic = iMWritingMono Nerd Font Bold Italic 
+
+# font-size               = 18 
+# font-family             = BlexMono Nerd Font
+# font-family-bold        = BlexMono Nerd Font Bold 
+# font-family-italic      = BlexMono Nerd Font Italic 
+# font-family-bold-italic = BlexMono Nerd Font Bold Italic 
+
+# font-size               = 18 
+# font-family             = Google Sans Code 
+# font-family-bold        = Google Sans Code Bold 
+# font-family-italic      = Google Sans Code Italic 
+# font-family-bold-italic = Google Sans Code Bold Italic 
+
+font-size               = 18 
+font-family             = Lilex 
+font-family-bold        = Lilex Bold 
+font-family-italic      = Lilex Italic 
+font-family-bold-italic = Lilex Bold Italic 
+
+# font-size               =  20
+# font-family             = Lotion
+# font-family-bold        = Lotion Bold 
+# font-family-italic      = Lotion Italic 
+# font-family-bold-italic = Lotion Bold Italic 
+
+
+# font-size               = 23
+# freetype-load-flags = no-hinting,no-force-autohint,no-monochrome,no-autohint
+# font-family             = Fixedsys Excelsior 
+# font-family-bold        = Fixedsys Excelsior 
+# font-family-italic      = Fixedsys Excelsior 
+# font-family-bold-italic = Fixedsys Excelsior 
+# font-thicken = true
+
+
+# font-size               = 16
+# font-thicken = true
+# freetype-load-flags = no-hinting,no-force-autohint,no-monochrome,no-autohint
+# font-family             = Pixel Code Regular
+# font-family-bold        = Pixel Code Bold 
+# font-family-italic      = Pixel Code Italic
+# font-family-bold-italic = Pixel Code Bold Italic
+
+# Main ones
+
+# font-family             = VictorMono-SemiBold 
+# font-family-bold        = VictorMono-Bold
+# font-family-italic      = VictorMono-SemiBoldItalic 
+# font-family-bold-italic = VictorMono-BoldItalic 
+# font-size               = 18
+
+# font-size               = 23
+# freetype-load-flags = no-hinting,no-force-autohint,no-monochrome,no-autohint
+# font-family             = Tamzen
+# font-family-bold        = TamzenBold 
+# font-family-italic      = Tamzen
+# font-family-bold-italic = TamzenBold 
+# font-thicken = true
+
+keybind   = clear
+keybind   = super+q=quit
+keybind   = super+c=copy_to_clipboard
+keybind   = super+v=paste_from_clipboard
+keybind   = super+shift+,=reload_config
+
+clipboard-paste-protection = false
+copy-on-select             = clipboard
+
+macos-option-as-alt = true
+
+window-decoration       = true
+macos-titlebar-style    = hidden
+cursor-click-to-move    = true
+
+# font-size               = 21
+background-opacity      = 1
+background-blur-radius  = 50
+
+# theme = Builtin Solarized Dark
+theme = test

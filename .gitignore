@@ -1,0 +1,24 @@
+.*
+/*
+/*/
+.DS_Store
+
+# Repo
+!.gitignore
+!/public/
+!README.md
+
+# Terminal stuff
+!/ghostty/
+
+!/nvim/
+!/tmux/
+
+!/zsh/
+!starship.toml
+
+!/mise/
+
+!/scripts/
+!/spoons/
+

@@ -1,0 +1,9 @@
+[tools]
+go = "latest"
+node = "latest"
+python = "latest"
+ruby = "latest"
+rust = "latest"
+zig = "latest"
+bun = "latest"
+pnpm = "latest"
