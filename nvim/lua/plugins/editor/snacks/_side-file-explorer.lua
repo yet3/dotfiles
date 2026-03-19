@@ -20,7 +20,7 @@ function M.open_side_explorer()
 end
 
 function M.setup()
-	vim.keymap.set("n", "<leader>m", M.open_side_explorer)
+	vim.keymap.set("n", "<leader>b", M.open_side_explorer)
 end
 
 return M
