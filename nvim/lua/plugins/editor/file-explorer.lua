@@ -7,6 +7,13 @@ return {
 			require("lib.toggle-oil"),
 			mode = "n",
 		},
+		{
+			"<leader>m",
+			function(path)
+				require("oil").open(path or nil)
+			end,
+			mode = "n",
+		},
 	},
 	config = function()
 		local oil = require("oil")
