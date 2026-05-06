@@ -1,5 +1,6 @@
 alias ls="eza --icons"
 alias lls="eza -1 -l --icons"
+alias lla="eza -1 -l --icons -a"
 
 alias ..="cd .."
 alias cd..="cd .."
