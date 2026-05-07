@@ -1,11 +1,11 @@
-export ZDIR="$HOME/.config/zsh"
-export ZBIN="$HOME/.config/zsh/init.zsh"
+export ZDIR="$HOME/dotfiles/zsh"
+export ZBIN="$HOME/dotfiles/zsh/init.zsh"
 export ZCACHE="$ZDIR/.cache"
 
 # ====== Core ====== #
+source "$ZDIR/options.zsh"
 source "$ZDIR/plugin-manager.zsh"
 source "$ZDIR/plugins.zsh"
-source "$ZDIR/options.zsh"
 source "$ZDIR/paths.zsh"
 source "$ZDIR/aliases.zsh" 
 # ================== #
@@ -13,7 +13,17 @@ source "$ZDIR/aliases.zsh"
 # ====== Tools ====== #
 _evalcache /opt/homebrew/bin/brew shellenv
 _evalcache mise activate zsh
+shortie start --silent
+
+sdk() {
+  unfunction sdk
+  export SDKMAN_DIR="$HOME/.sdkman"
+  [[ -s "$SDKMAN_DIR/bin/sdkman-init.sh" ]] && \
+    source "$SDKMAN_DIR/bin/sdkman-init.sh"
+  sdk "$@"
+}
 # =================== #
+# zprof
 
 
 # ============================= #
@@ -26,6 +36,3 @@ _evalcache mise activate zsh
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
