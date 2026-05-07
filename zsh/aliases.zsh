@@ -22,3 +22,5 @@ alias zsh-r="source $ZBIN"
 alias zsh-e="cd $HOME/.config/zsh && nvim ./init.zsh"
 alias .zsh="cd $ZDIR"
 
+alias dotfiles="cd $HOME/dotfiles"
+
