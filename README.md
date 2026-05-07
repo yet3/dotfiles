@@ -6,6 +6,16 @@ My personal dotfiles.
 
 **Use at your own discretion!**
 
+Create symlinks
+```sh
+./dotfiles.sh setup
+```
+
+Remove symlinks
+```sh
+./dotfiles.sh cleanup
+```
+
 ## Stuff I Use
 - [Ghostty](https://ghostty.org/) - Terminal
 - [Zsh](https://www.zsh.org/) - Shell
