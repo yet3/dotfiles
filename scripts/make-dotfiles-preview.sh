@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-hs -c "dofile('$HOME/.config/spoons/dotfiles-screenshot.lua')"
+hs -c "dofile('$HOME/dotfiles/spoons/dotfiles-screenshot.lua')"
