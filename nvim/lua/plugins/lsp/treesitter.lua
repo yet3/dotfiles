@@ -1,55 +1,12 @@
 return {
 	{
-		"romus204/tree-sitter-manager.nvim",
-		lazy = true,
-		cmd = { "TSInstall", "TSManager", "TSUpdate", "TSLog", "TSUninstall" },
+		"VonHeikemen/ts-enable.nvim",
+		lazy = false,
 		opts = {
-			ensure_installed = {
-				"vim",
-				"vimdoc",
-				"bash",
-
-				"html",
-				"javascript",
-				"typescript",
-				"tsx",
-				"styled",
-				"astro",
-				"svelte",
-				"graphql",
-				"css",
-				"scss",
-				"prisma",
-
-				"go",
-				"gomod",
-				"gosum",
-
-				"c",
-				"cpp",
-				"zig",
-				"rust",
-				"lua",
-				"json",
-
-				"sql",
-
-				"markdown",
-				"markdown_inline",
-
-				"query",
-				"regex",
-				"yaml",
-				"toml",
-				"dockerfile",
-				"make",
-
-				"git_config",
-				"git_rebase",
-				"gitattributes",
-				"gitcommit",
-				"gitignore",
-			},
+			auto_init = true,
+			auto_install = true,
+			highlights = true,
+			folds = false,
 		},
 	},
 	{
