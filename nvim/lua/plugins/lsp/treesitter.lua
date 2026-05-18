@@ -12,7 +12,7 @@ return {
 	{
 		"windwp/nvim-ts-autotag",
 		dependencies = {
-			"romus204/tree-sitter-manager.nvim",
+			"VonHeikemen/ts-enable.nvim",
 		},
 		opts = {
 			opts = {
