@@ -69,7 +69,7 @@ delete_links() {
     local name="${NAMES[$i]}" src="${SRCS[$i]}" target="${TARGETS[$i]}"
 
     if [[ ! -e "$src" ]]; then
-      echo -e "${TAB}${RED}✖ ERROR${RESET}  [$name] target '$target' does not exist" >&2
+      echo -e "${TAB}${RED}✖ ERROR${RESET}  [$name] source '$src' does not exist" >&2
       ((errs++)) 
       continue
     fi
