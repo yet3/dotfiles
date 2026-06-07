@@ -111,11 +111,34 @@ links_status() {
   done
 }
 
+show_help() {
+  echo -e "
+${BOLD}Usage:${RESET} $(basename "$0") <command> [--dry]
+
+${BOLD}A dotfiles symlink manager.${RESET}
+
+${BOLD}Commands:${RESET}
+${TAB}${CYAN}setup${RESET}    Create all registered symlinks
+${TAB}${CYAN}cleanup${RESET}  Remove all registered symlinks
+${TAB}${CYAN}status${RESET}   Show the current state of all registered symlinks
+${TAB}${CYAN}help${RESET}     Print help
+
+${BOLD}Options:${RESET}
+${TAB}${CYAN}--dry${RESET}    Print what would happen without making changes
+
+${BOLD}Examples:${RESET}
+${TAB}dotfiles setup
+${TAB}dotfiles setup --dry
+${TAB}dotifles cleanup --dry
+${TAB}dotfiles status
+"
+}
+
 run() {
   case "$1" in
     "setup")   create_links;;
     "cleanup") delete_links;;
-    "status")  links_status ;;
-    *) echo "Valid commands: 'setup', 'cleanup', 'status'";;
+    "status")  links_status;;
+    "help"|"-h"|"--help"|*)    show_help;;
   esac
 }
