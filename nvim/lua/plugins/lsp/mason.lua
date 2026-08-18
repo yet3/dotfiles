@@ -43,7 +43,7 @@ return {
 				"stylua",
 				"svelte",
 				"tailwindcss",
-				"ts_ls",
+        "tsc",
 				"unocss",
 				"zls",
 			},
