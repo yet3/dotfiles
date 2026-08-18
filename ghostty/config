@@ -15,11 +15,19 @@
 # font-family-italic      = Google Sans Code Italic 
 # font-family-bold-italic = Google Sans Code Bold Italic 
 
-font-size               = 18 
-font-family             = Lilex 
-font-family-bold        = Lilex Bold 
-font-family-italic      = Lilex Italic 
-font-family-bold-italic = Lilex Bold Italic 
+
+
+# font-size               = 18 
+# font-family             = Lilex 
+# font-family-bold        = Lilex Bold 
+# font-family-italic      = Lilex Italic 
+# font-family-bold-italic = Lilex Bold Italic 
+
+font-size               = 18.25 
+font-family             = Iosevka Custom 
+font-family-bold        = Iosevka Custom Bold 
+font-family-italic      = Iosevka Custom Italic 
+font-family-bold-italic = Iosevka Custom Bold Italic 
 
 # font-size               =  20
 # font-family             = Lotion
