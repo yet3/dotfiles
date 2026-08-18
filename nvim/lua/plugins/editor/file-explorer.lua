@@ -67,7 +67,7 @@ return {
 				--
 				["<C-s>"] = function()
 					actions.select_vsplit.callback()
-					actions.close.callback()
+					-- actions.close.callback()
 				end,
 				["<C-w>"] = function() end,
 				["<C-l>"] = function() end,
