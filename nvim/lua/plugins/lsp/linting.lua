@@ -9,7 +9,7 @@ return {
 		local use_eslint = has_config_file({ "eslint.config.js", ".eslintrc", ".eslintrc.json", ".eslintrc.js" })
 
 		local biome_prettier = {
-			use_biome and "biomejs" or use_eslint and "eslint_d" or "biomejs",
+			use_biome and "biomejs" or use_eslint and "eslint" or "biomejs",
 			"codespell",
 		}
 
