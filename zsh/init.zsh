@@ -36,3 +36,11 @@ sdk() {
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
+
+# pnpm
+export PNPM_HOME="/Users/yet3/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
